@@ -8,7 +8,7 @@
 #     test  - build and run unit tests.
 #     clean - delete all generated files.
 #
-INCS = includes
+INCS = include
 MY_CFLAGS = -c -g -O0 -Wall -I$(INCS)
 MY_LDFLAGS = -lrt
 
