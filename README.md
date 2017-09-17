@@ -10,6 +10,9 @@ head of a reversed list.
 
 This project was built on 64-bit Mint 17.2 Rafaela, using gcc version (Ubuntu 4.9.4-2ubuntu1~14.04.1) 4.9.4.
 
+Bonus: The build is done largely by a generic Makefile.inc that includes the magic incantations for getting gcc to generate build dependencies.  It is easy
+to adapt to other projects.
+
 ## Build and Run
 
 1. Clone ReverseLinkedList
