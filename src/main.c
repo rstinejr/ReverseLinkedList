@@ -8,6 +8,15 @@
 #include <assert.h>
 #include <stdio.h>
 
+disp_list(LinkNode *node)
+{
+	while (node != NULL)
+	{
+		printf("%i ", (int) node->val);
+		node = node->nxt;
+	}
+}	
+
 int main(int argc, char *argv[])
 {
 	LinkNode *head = create_node((void *) 1);
@@ -24,6 +33,10 @@ int main(int argc, char *argv[])
 	p = append_node(p, n4);
 	assert(p == n4);
 	
+	printf("Initial list: ");
+	disp_list(head);
+	printf("\n");
+
 	free_list(head);
 
 	printf("Done.\n");
