@@ -9,9 +9,10 @@
 
 LinkNode *create_node(void *val);
 
-LinkNode *append_node(LinkNode *first, LinkNode *second);
+LinkNode *reverse_list(LinkNode *head);
+void      free_list   (LinkNode *head);
 
-void      free_list(LinkNode *node);
+LinkNode *append_node(LinkNode *first, LinkNode *second);
 void      free_node(LinkNode *node);
 
 #endif

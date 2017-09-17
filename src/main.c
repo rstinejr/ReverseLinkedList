@@ -8,11 +8,11 @@
 #include <assert.h>
 #include <stdio.h>
 
-disp_list(LinkNode *node)
+void disp_list(LinkNode *node)
 {
 	while (node != NULL)
 	{
-		printf("%i ", (int) node->val);
+		printf("%lu ", (unsigned long) node->val);
 		node = node->nxt;
 	}
 }	
@@ -34,6 +34,13 @@ int main(int argc, char *argv[])
 	assert(p == n4);
 	
 	printf("Initial list: ");
+	disp_list(head);
+	printf("\n");
+
+	head = reverse_list(head);
+	assert(head == n4);
+
+	printf("Reversed list: ");
 	disp_list(head);
 	printf("\n");
 

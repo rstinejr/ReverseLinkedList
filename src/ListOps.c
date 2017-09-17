@@ -22,6 +22,22 @@ LinkNode *append_node(LinkNode *first, LinkNode *second)
 	return second;
 }	
 	
+LinkNode *reverse_list(LinkNode *head)
+{
+	LinkNode *prev = NULL;
+	LinkNode *node = head;
+
+	while (node != NULL)
+	{
+		LinkNode *nxt = node->nxt;
+		node->nxt = prev;
+		prev = node;
+		node = nxt;
+	}
+
+	return prev;  /* return fixed-up node whose initial nxt was NULL.*/
+}
+
 void free_list(LinkNode *head)
 {
 	while (head != NULL)
